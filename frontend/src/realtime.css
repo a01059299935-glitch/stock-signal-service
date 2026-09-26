@@ -1,0 +1,6 @@
+.live-price { white-space: nowrap; }
+.live-large { font-size: 30px; font-weight: 700; }
+.price-flash-up { animation: price-up 220ms ease-out; }
+.price-flash-down { animation: price-down 220ms ease-out; }
+@keyframes price-up { 0% { color: #43cd98; text-shadow: 0 0 12px #43cd9866; } 100% { color: inherit; text-shadow: none; } }
+@keyframes price-down { 0% { color: #f07b84; text-shadow: 0 0 12px #f07b8466; } 100% { color: inherit; text-shadow: none; } }

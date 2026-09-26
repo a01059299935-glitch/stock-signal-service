@@ -1,0 +1,11 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+sqlalchemy==2.0.41
+psycopg[binary]==3.2.9
+pydantic-settings==2.9.1
+httpx==0.28.1
+python-dateutil==2.9.0.post0
+alembic==1.15.2
+websockets==15.0.1
+boto3>=1.38,<2
+cryptography>=44,<47

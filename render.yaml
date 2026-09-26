@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: stock-signal-private
+    runtime: docker
+    plan: free
+    region: ohio
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: false
+    envVars:
+      - key: APP_ENVIRONMENT
+        value: production
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: FINNHUB_API_KEY
+        sync: false
+      - key: OPENDART_API_KEY
+        value: ""
+      - key: TELEGRAM_BOT_TOKEN
+        value: ""
+      - key: TELEGRAM_CHAT_ID
+        value: ""
+      - key: SEC_USER_AGENT
+        value: "StockSignal contact@example.com"
+      - key: MARKET_DATA_INTERVAL_SECONDS
+        value: "300"
+      - key: R2_ENDPOINT_URL
+        value: ""
+      - key: R2_ACCESS_KEY_ID
+        value: ""
+      - key: R2_SECRET_ACCESS_KEY
+        value: ""
+      - key: R2_BUCKET
+        value: ""
+      - key: R2_MAX_STORAGE_BYTES
+        value: "9000000000"
+      - key: BACKUP_ENCRYPTION_KEY
+        value: ""
